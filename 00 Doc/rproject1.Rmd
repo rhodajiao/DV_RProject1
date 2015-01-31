@@ -15,8 +15,18 @@ library("RCurl")
 library("reshape2")
 library("grid")
 source("../01 Data/SQLData.R")
-dfc       
-       
+# 1st plot
+p1 <- ggplot(dfcomb,aes(x=as.Date(ORDER_DATE,"%Y-%m-%d") ,y=as.Date(SHIPPED_DATE,"%Y-%m-%d"))) + geom_point(aes(color=as.factor(UNIT_PRICE)))
+p1+facet_wrap(~CUSTOMER_STATE)
+
+# 2nd plot
+p2 <- ggplot(dfcomb,aes(x=as.Date(ORDER_DATE,"%Y-%m-%d") ,y=as.Date(SHIPPED_DATE,"%Y-%m-%d"))) + geom_point(aes(color=as.factor(TITLE)))
+p2+facet_wrap(~CUSTOMER_STATE)
+
+# 3rd plot
+p3 <- ggplot(dfcomb,aes(x=as.Date(ORDER_DATE,"%Y-%m-%d") ,y=as.Date(SHIPPED_DATE,"%Y-%m-%d"))) + geom_point(aes(color=as.factor(ARTIST)))
+p3+facet_wrap(~CUSTOMER_STATE)
+
 ```
 
 You can also embed plots, for example:
