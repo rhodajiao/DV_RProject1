@@ -1,0 +1,16 @@
+{
+    "contents" : "print(head(customers))\nprint(ggplot(customers, aes(x=CUSTOMER_STATE,y=CUSTOMER_ID)) + geom_point(aes(color=as.factor(CUSTOMER_LAST_NAME))))\nprint(head(items))\nprint(ggplot(items, aes(x=ARTIST)) + geom_histogram())\nprint(head(orders))\nprint(ggplot(orders, aes(x=as.Date(ORDER_DATE, \"%Y-%m-%d\"),y=as.Date(SHIPPED_DATE, \"%Y-%m-%d\"))) + geom_point())\nprint(head(order_details))\nprint(ggplot(order_details, aes(x=ITEM_ID)) + geom_histogram())\nprint(ggplot(df,aes(x=as.Date(ORDER_DATE, \"%Y-%m-%d\"), y=as.Date(SHIPPED_DATE, \"%Y-%m-%d\"), color=as.factor(UNIT_PRICE))) + geom_point() + facet_wrap(~CUSTOMER_STATE))\nprint(ggplot(df,aes(x=as.Date(ORDER_DATE, \"%Y-%m-%d\"), y=as.Date(SHIPPED_DATE, \"%Y-%m-%d\"), color=as.factor(TITLE))) + geom_point() + facet_wrap(~CUSTOMER_STATE)) \nprint(ggplot(df,aes(x=as.Date(ORDER_DATE, \"%Y-%m-%d\"), y=as.Date(SHIPPED_DATE, \"%Y-%m-%d\"), color=as.factor(ARTIST))) + geom_point() + facet_wrap(~CUSTOMER_STATE))\n",
+    "created" : 1423004600342.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3134488883",
+    "id" : "1C05E720",
+    "lastKnownWriteTime" : 1423008762,
+    "path" : "~/DataVisualization/DV_RProject1/02 Visualizations/plots.R",
+    "project_path" : "02 Visualizations/plots.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
